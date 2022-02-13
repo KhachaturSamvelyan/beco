@@ -1,0 +1,94 @@
+.menu
+    min-width: 240px
+    background: rgba(243, 244, 249, 1)
+    min-height: 100vh
+    padding: 41px 0
+    position: relative
+    &-header
+        margin-bottom: 59px
+        padding: 0 41px
+        a
+            display: flex
+            align-items: center
+            transition: 0.3s
+            img
+                margin-right: 10px
+                width: 50px
+                height: 50px
+            p
+                font-family: 'Poppins', sans-serif
+                font-style: normal
+                font-weight: 500
+                font-size: 16px
+                line-height: 24px
+                color: #333333
+            &:hover
+                p
+                    color: #34ABE0
+
+    ul
+        .active
+            border-left: 3px solid #34ABE0
+            a
+                p
+                    color: #34ABE0
+                svg
+                    path
+                        stroke: #34ABE0
+
+        li
+            transition: 0.3s
+            border-left: 3px solid transparent
+            &:not(:last-child)
+                margin-bottom: 42px
+            &:hover 
+                color: #34ABE0
+                border-left: 3px solid #34ABE0
+                a
+                    p
+                        color: #34ABE0
+                    svg
+                        path
+                            stroke: #34ABE0
+
+            a
+                display: flex
+                align-items: center
+                padding-left: 41px
+                svg
+                    margin-right: 12px
+                p
+                    font-family: 'Open Sans', sans-serif
+                    font-style: normal
+                    font-weight: 600
+                    font-size: 16px
+                    line-height: 22px
+                    color: #333333
+
+@media (min-width: 1280px)
+    .menu
+        &-main-mobile
+            display: none
+
+@media (max-width: 1280px)
+    .menu
+        min-width: 104px
+        .hide
+            display: block
+        .show
+            display: none
+        
+        #show-element
+            &:after
+                content: url(../../img/burger.svg)
+                position: absolute
+                right: -48px
+                top: 0
+                width: 48px
+                height: 106px
+                background-image: url("../../img/menu_shape.png")
+                background-size: contain
+                display: flex
+                justify-content: center
+                align-items: center
+       

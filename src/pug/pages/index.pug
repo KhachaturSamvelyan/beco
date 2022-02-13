@@ -1,0 +1,24 @@
+extends ../layout/layout.pug
+
+block variables
+	- var title = 'Развлечения | Какой магазин вам нужен?';
+
+block links
+	- var link = 'main.css';
+
+block scripts
+	- var js = 'index.js';
+
+
+
+block content
+	section.main
+		include ../blocks/menu.pug
+		.main-blok
+			include ../blocks/main-header.pug
+			include ../blocks/main-content.pug
+
+		
+
+	
+
